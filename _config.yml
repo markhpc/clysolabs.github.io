@@ -13,18 +13,41 @@
 title: Clyso Labs
 
 # Your name to show in the footer
-author: Some Person
+author: Clyso Labs 
 
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  About: "aboutme"
+  Blog: "blog"
+  Projects:
+    - Ceph: "ceph"
+    - Garden Linux: "gardenlinux"
+    - Kubernetes: "kubernetes"
+    - OpenStack: "opnestack"
+  Research:
+    - Events: "events"
+    - Partnerships: "partnerships"
+    - Presentations: "presentations"
+    - Publications: "publications"
+  Support: "https://www.clyso.com/en/contact/"
+
+#######################
+# --- Collections --- #
+#######################
+
+collections:
+  events:
+    output: true
+    permalink: /:collection:/name
+  presentations:
+    output: true
+    permalink: /:collection/:name
+  publications:
+    output: true
+    permalink: /:collection/:name
 
 ################
 # --- Logo --- #
@@ -32,15 +55,14 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon.png"
+#avatar: "/assets/svg/web_icon.svg"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
-round-avatar: true
+#round-avatar: false 
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-#title-img: /path/to/image
-
+title-img: /assets/svg/labs_logo.svg
 
 #####################################
 # --- Footer social media links --- #
@@ -50,22 +72,22 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
+  email: "kontakt@clyso.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
-  youtube: c/daattali
+#  facebook: deanattali
+  github: ClysoLabs
+#  twitter: daattali
+#  patreon: DeanAttali
+#  youtube: c/daattali
 #  medium: yourname
 #  reddit: yourname
-#  linkedin: daattali
-#  xing: yourname
+  linkedin: clyso 
+  xing: clysogmbh 
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
 #  instagram: deanat78
 #  spotify: yourname
-#  telephone: +14159998888
+  telephone: +4989215523910 
 #  steam: deanat78
 #  twitch: yourname
 #  yelp: yourname
@@ -89,14 +111,14 @@ rss-description: This website is a virtual proof that I'm awesome
 
 # Select which social network share links to show in posts
 share-links-active:
-  twitter: true
-  facebook: true
+#  twitter: true
+#  facebook: true
   linkedin: true
-  vk: false
+#  vk: false
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"
+url-pretty: "clysolabs.github.io"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
@@ -116,7 +138,7 @@ edit_page_button: true
 # Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
 # If this setting is off, then long sub-menu words might get cut off
 # See https://github.com/daattali/beautiful-jekyll/issues/765 to understand the issue this setting can solve
-navbar-var-length: false
+navbar-var-length: true 
 
 # The keywords to associate with your website, for SEO purposes
 #keywords: "my,list,of,keywords"
@@ -127,17 +149,19 @@ navbar-var-length: false
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
+navbar-col: "#414350F8"
+navbar-text-col: "#FFFFFF"
+navbar-border-col: "#424450"
+navbar-hover-col: "#d7ff84"
 page-col: "#FFFFFF"
 text-col: "#404040"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-footer-col: "#EAEAEA"
-footer-text-col: "#777777"
-footer-link-col: "#404040"
-footer-hover-col: "#0085A1"
+#link-col: "#d7ff84"
+#hover-col: "#d7ff84"
+footer-col: "#424450"
+footer-text-col: "#DDDDDD"
+footer-link-col: "#FFFFFF"
+footer-hover-col: "#d7ff84"
+footer-fa-text: "#424450"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
@@ -150,8 +174,8 @@ footer-hover-col: "#0085A1"
 #mobile-theme-col: "#0085A1"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
-#site-css:
-#  - "/assets/css/custom-styles.css"
+site-css:
+  - "/assets/css/clysolabs.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:
@@ -254,7 +278,9 @@ date_format: "%B %-d, %Y"
 timezone: "America/Toronto"
 markdown: kramdown
 highlighter: rouge
+# Permalinks
 permalink: /:year-:month-:day-:title/
+#permalink: /:year/:month/:day/:title/
 paginate: 5
 
 kramdown:

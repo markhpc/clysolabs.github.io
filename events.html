@@ -1,0 +1,31 @@
+---
+layout: page 
+title: Events
+cover-img: "/assets/img/events_banner.png"
+#subtitle:
+---
+
+{% assign events = site.events | sort: "year" | reverse %}
+{% for e in events %}
+<div class="pubitem">
+  <div class="pubteaser">
+    <a href="{{e.url}}">
+      <img
+         src="{{ e.cover-img }}"
+#        src="/assets/img/presentations/{{ p.slug }}_small.jpg"
+        alt="{{e.slug}} event teaser"
+      />
+    </a>
+  </div>
+  <div class="pubtext">
+    <div class="pubtitle">{{ e.title }}</div>
+    <div class="pubauthors">{{ e.authors }}</div>
+    <div class="pubinfo">{{ e.presentation }}, {{ p.year}}</div>
+    <div class="publinks">
+      <a href="/download/{{ e.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a
+      >&nbsp;&nbsp;
+      <a href="{{e.url}}"><i class="fas fa-link"></i> Event Page</a>
+    </div>
+  </div>
+</div>
+{% endfor %}

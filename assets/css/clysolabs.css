@@ -1,0 +1,43 @@
+
+########################
+# --- Publications --- #
+########################
+
+.pubteaser {
+  clear: both;
+}
+
+.pubteaser a {
+  float: left;
+  margin-right: 2em;
+}
+
+.pubteaser img {
+  width: 100px;
+  border: 1px solid black;
+}
+
+.pubtext {
+}
+
+.pubtitle {
+  margin-bottom: 0.5em;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+.pubauthors,
+.pubinfo {
+  font-size: 75%;
+  margin-bottom: 0.75em;
+}
+
+.publinks {
+  font-size: 75%;
+}
+
+.pubitem {
+  margin: 2em 0;
+  line-height: 1em;
+}
+

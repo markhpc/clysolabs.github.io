@@ -1,0 +1,31 @@
+---
+layout: page 
+title: Presentations
+cover-img: "/assets/img/presentations_banner.png"
+#subtitle: Presentations by Clyso Employees 
+---
+
+{% assign presentations = site.presentations | sort: "year" | reverse %}
+{% for p in presentations %}
+<div class="pubitem">
+  <div class="pubteaser">
+    <a href="{{p.url}}">
+      <img
+         src="{{ p.cover-img }}"
+#        src="/assets/img/presentations/{{ p.slug }}_small.jpg"
+        alt="{{p.slug}} presentation teaser"
+      />
+    </a>
+  </div>
+  <div class="pubtext">
+    <div class="pubtitle">{{ p.title }}</div>
+    <div class="pubauthors">{{ p.authors }}</div>
+    <div class="pubinfo">{{ p.presentation }}, {{ p.year}}</div>
+    <div class="publinks">
+      <a href="/download/{{ p.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a
+      >&nbsp;&nbsp;
+      <a href="{{p.url}}"><i class="fas fa-link"></i> Project Page</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
